@@ -229,14 +229,20 @@ def parsejoint(joint: Element, root: Element):
 def convert(root: Element) -> Element:
     logging.debug("Reading input file: %s", input_file)
 
-    robot = Element('robot', {'name': 'x500_base'})
+    model = root.find('.//model')
+    if model is None:
+        raise ValueError("Missing 'model' in the input SDF file.")
+
+    modelname = model.attrib['name']
+    logging.debug("Model name: %s", modelname)
+
+    robot = Element('robot', {'name': modelname})
 
     base_link = root.find('.//link[@name="base_link"]')
     if base_link is None:
         raise ValueError("Missing 'base_link' in the input SDF file.")
 
     converted_base_link = parsebaselink(base_link)
-    logging.debug("Base link converted: %s", converted_base_link)
     robot.append(converted_base_link)
 
     # Trova tutti i rotori
