@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<robot name="x500_base">
+  <link name="base_link">
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.02166666666666667" ixy="0" ixz="0" iyy="0.02166666666666667" iyz="0" izz="0.04000000000000001"/>
+    </inertial>
+    <visual name="base_link_visual">
+      <origin rpy="0.0 0.0 3.141592654" xyz="0.0 0.0 0.025"/>
+      <geometry>
+        <mesh filename="NXP-HGD-CF.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <visual name="5010_motor_base_0">
+      <origin rpy="0.0 0.0 -0.45" xyz="0.174 0.174 0.032"/>
+      <geometry>
+        <mesh filename="5010Base.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <visual name="5010_motor_base_1">
+      <origin rpy="0.0 0.0 -0.45" xyz="-0.174 0.174 0.032"/>
+      <geometry>
+        <mesh filename="5010Base.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <visual name="5010_motor_base_2">
+      <origin rpy="0.0 0.0 -0.45" xyz="0.174 -0.174 0.032"/>
+      <geometry>
+        <mesh filename="5010Base.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <visual name="5010_motor_base_3">
+      <origin rpy="0.0 0.0 -0.45" xyz="-0.174 -0.174 0.032"/>
+      <geometry>
+        <mesh filename="5010Base.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <visual name="NXP_FMUK66_FRONT">
+      <origin rpy="1.0 0.0 1.57" xyz="0.047 0.001 0.043"/>
+      <geometry>
+        <box size=".013 .007 0.001"/>
+      </geometry>
+<cast_shadows>false</cast_shadows>
+    </visual>
+    <visual name="NXP_FMUK66_TOP">
+      <origin rpy="0.0 0.0 -1.57" xyz="-0.023 0.0 0.0515"/>
+      <geometry>
+        <box size=".013 .007 0.001"/>
+      </geometry>
+<cast_shadows>false</cast_shadows>
+    </visual>
+    <visual name="RDDRONE_FMUK66_TOP">
+      <origin rpy="0.0 0.0 -1.57" xyz="-0.03 0.0 0.0515"/>
+      <geometry>
+        <box size=".032 .0034 0.001"/>
+      </geometry>
+<cast_shadows>false</cast_shadows>
+    </visual>
+  </link>
+  <link name="rotor_0">
+    <origin rpy="0.0 0.0 0.0" xyz="0.174 -0.174 0.06"/>
+    <inertial>
+      <mass value="0.016076923076923075"/>
+      <inertia ixx="3.8464910483993325e-07" ixy="0" ixz="0" iyy="2.6115851691700804e-05" iyz="0" izz="2.649858234714004e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.022 -0.14638461538461536 -0.016"/>
+      <geometry>
+        <mesh filename="1345_prop_ccw.dae" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.032"/>
+      <geometry>
+        <mesh filename="5010Bell.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rotor_1">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.174 0.174 0.06"/>
+    <inertial>
+      <mass value="0.016076923076923075"/>
+      <inertia ixx="3.8464910483993325e-07" ixy="0" ixz="0" iyy="2.6115851691700804e-05" iyz="0" izz="2.649858234714004e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.022 -0.14638461538461536 -0.016"/>
+      <geometry>
+        <mesh filename="1345_prop_ccw.dae" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.032"/>
+      <geometry>
+        <mesh filename="5010Bell.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rotor_2">
+    <origin rpy="0.0 0.0 0.0" xyz="0.174 0.174 0.06"/>
+    <inertial>
+      <mass value="0.016076923076923075"/>
+      <inertia ixx="3.8464910483993325e-07" ixy="0" ixz="0" iyy="2.6115851691700804e-05" iyz="0" izz="2.649858234714004e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.022 -0.14638461538461536 -0.016"/>
+      <geometry>
+        <mesh filename="1345_prop_cw.dae" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.032"/>
+      <geometry>
+        <mesh filename="5010Bell.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="rotor_3">
+    <origin rpy="0.0 0.0 0.0" xyz="-0.174 -0.174 0.06"/>
+    <inertial>
+      <mass value="0.016076923076923075"/>
+      <inertia ixx="3.8464910483993325e-07" ixy="0" ixz="0" iyy="2.6115851691700804e-05" iyz="0" izz="2.649858234714004e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="-0.022 -0.14638461538461536 -0.016"/>
+      <geometry>
+        <mesh filename="1345_prop_cw.dae" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.032"/>
+      <geometry>
+        <mesh filename="5010Bell.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="rotor_0_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="rotor_0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
+    <origin xyz="0.174 -0.174 0.06"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+  <joint name="rotor_1_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="rotor_1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
+    <origin xyz="-0.174 0.174 0.06"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+  <joint name="rotor_2_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="rotor_2"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
+    <origin xyz="0.174 0.174 0.06"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+  <joint name="rotor_3_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="rotor_3"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1e+16" upper="1e+16" effort="1.0" velocity="1.0"/>
+    <origin xyz="-0.174 -0.174 0.06"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+</robot>
